@@ -159,7 +159,7 @@ export default function Index() {
     const finalQuestion = question || inputValue.trim();
     if (!finalQuestion) return;
 
-    navigate("/answer", { state: { answer: "adsfsdfdsfsdf" } });
+    // navigate("/answer", { state: { answer: "adsfsdfdsfsdf" } });
     const userMessage = { type: "question", text: finalQuestion };
     setChatHistory((prev) => [...prev, userMessage]);
     setShowContent(false);
@@ -494,7 +494,7 @@ export default function Index() {
                           <div
                             key={index}
                             onClick={() => handleSuggestedClick(question)}
-                            className="text-xs text-black hover:text-black md:text-[15px] border hover:border-purple-300 bg-white text-[26292b] px-4 py-4 lg:py-6 rounded-md cursor-pointer p-6 hover:drop-shadow-[0_4px_6px_rgba(200,150,255,0.2)]"
+                            className="text-xs text-black hover:text-black md:text-[15px] border hover:border-purple-300 bg-white text-[26292b] px-4 py-4 lg:py-6 rounded-md cursor-pointer p-6 hover:drop-shadow-[0_4px_6px_rgba(200,150,255,0.6)]"
                           >
                             {question}
                           </div>
@@ -506,8 +506,7 @@ export default function Index() {
                   //  <Chat props={chatHistory} loading={isLoading}/>
                   <div className="bg-[#F4F8FD] border border-purple-100 rounded-lg p-5 md:p-6 space-y-4">
                     {chatHistory?.map((msg, i) => {
-                      console.log("This is data", msg);
-
+                     
                       return (
                         <div
                           key={i}
@@ -551,7 +550,7 @@ export default function Index() {
                     })}
 
                     {/* Show loading indicator when waiting for reply */}
-                    {loading && <LoadingIndicator />}
+                    {isLoading && <LoadingIndicator />}
                   </div>
                 )}
               </div>
@@ -637,8 +636,7 @@ export default function Index() {
           )}
         </button>
       </footer>
-
-      <Dialog
+ <Dialog
         open={open}
         onClose={handleClose}
         // PaperComponen={PaperComponent}
@@ -646,7 +644,7 @@ export default function Index() {
         slotProps={{
           paper: {
             sx: {
-              padding: "5px",
+              padding: "5px",   maxWidth: "400px",
               borderRadius: "15px", // Your desired border radius
             },
           },
@@ -654,31 +652,33 @@ export default function Index() {
       >
         <span className="border-b border-gray-400">
           <DialogTitle
-            sx={{ cursor: "text", borderRadius: "40px" }}
+            sx={{ cursor: "text", borderRadius: "40px",  fontWeight: "bold",    
+    fontSize: "1.18rem",  textAlign: "center",      }}
             id="draggable-dialog-title"
           >
-            Delete Chat?
+            <p><ion-icon className="text-red-700 text-3xl rounded-full bg-red-200 p-2" name="warning-outline"></ion-icon></p>
+             Delete Chat?
           </DialogTitle>
         </span>
         <DialogContent>
           <DialogContentText>
-            <span className="text-gray-800">
-              Are you sure! You want to delete this ?
+            <span className="text-gray-800 block text-center max-w-[280px]">
+              Are you sure you want to delete this chat? This action cannot be undone.
             </span>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <div className="w-48 flex justify-between">
-            <button
+          <div className="w-48 flex justify-between text-md">
+           <button
               autoFocus
               onClick={handleClose}
-              className="border border-gray-400 ml-8 text-gray-700 py-1 px-3 rounded-3xl hover:bg-gray-300"
+              className="border border-gray-400 ml-8 text-black py-1 px-3 rounded-xl bg-gray-200 hover:bg-gray-400 transition duration-300 ease-in-out cursor-pointer focus:outline-none  focus:ring-gray-500 hover:scale-110"
             >
               Cancel
             </button>
 
             <button
-              className="text-white bg-red-600 py-1 px-3 rounded-3xl hover:bg-red-800"
+              className="text-white  bg-red-600 py-1 px-3 rounded-xl hover:bg-red-800 transition duration-300 ease-in-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-red-500 hover:scale-110"
               onClick={handleDeleteChat}
             >
               Delete
