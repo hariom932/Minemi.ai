@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.markdown-content p {
+  margin-bottom: 1em;
+}
+
+.markdown-content ol,
+.markdown-content ul {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.markdown-content li {
+  margin-bottom: 0.5em;
+}
+.chatgpt-reply h1,
+.chatgpt-reply h2,
+.chatgpt-reply h3,
+.chatgpt-reply h4,
+.chatgpt-reply h5,
+.chatgpt-reply h6 {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+

@@ -1,0 +1,45 @@
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  margin-top: 1.5em;
+  margin-bottom: 1em; /* this adds the "breakline" feel after headings */
+}
+
+.markdown-content p {
+  margin-bottom: 1.5em; /* Adds space after each paragraph */
+  display: block; /* Ensure paragraph acts as block-level element */
+  line-height: 1.6; /* Optional: Improve readability */
+}
+
+.markdown-content p + p {
+  margin-top: 1.5em; 
+}
+
+
+.chatgpt-reply ol,
+.chatgpt-reply ul {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.chatgpt-reply li {
+  margin-bottom: 0.5em;
+}
+.markdown-content {
+  display: block; 
+}
+.answer-html ul,
+.answer-html ol {
+  margin-top: 1rem;   /* Start from a new line */
+  padding-left: 1.5rem; /* Indent the list */
+}
+
+.answer-html li {
+  margin-bottom: 0.5rem;
+  list-style-type: disc; /* Use bullet points */
+}
+
+
