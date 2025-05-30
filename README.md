@@ -1,12 +1,20 @@
-# React + Vite
+Mine.ai 💬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Mine.ai** is a sleek and responsive AI-Financial Advisor chat application. Built to provide intelligent, human-like conversations, it serves as a personal assistant for brainstorming ideas, answering questions, learning new topics, or simply chatting and know about your credit score and active loans.
 
-Currently, two official plugins are available:
+Visit the live app 👉 [minemi.ai](https://minemi.ai)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- ⚡ Real-time AI responses
+- 💬 Clean and user-friendly chat interface
+- 🧠 Context-aware conversation flow
+- 📚 Supports a wide range of topics: writing, education, and more
+- 🌓 Dark/light mode support
+- 🔒 Secure and scalable architecture
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **Frontend:** React, Tailwind CSS / Material UI 
+- **Backend/API:** Javascript Express API integration (via API)
+- **Deployment:** Vercel 
